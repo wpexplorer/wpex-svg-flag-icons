@@ -75,6 +75,9 @@ if ( ! class_exists( 'WPEX_SVG_Flag_Icons' ) ) :
 				'after'    => '',
 			), $atts, 'wpex_flag_icon' ) );
 
+			// Define output var
+			$output = '';
+
 			// Sanitize inline var
 			$inline = ( 'true' == $inline ) ? true : false;
 
@@ -107,19 +110,22 @@ if ( ! class_exists( 'WPEX_SVG_Flag_Icons' ) ) :
 
 				// Render shortcode
 				if ( ! $inline ) {
-					echo '<div class="wpex-flag-wrapper"'. $inline_style .'>';
+					$output = '<div class="wpex-flag-wrapper"'. $inline_style .'>';
 				}
-						if ( $inline && $before ) {
-							echo '<span class="wpex-flag-before">'. esc_html( $before ) .'</span>';
-						}
-						echo '<span class="'. esc_attr( $classes ) .'"></span>';
-						if ( $inline && $after ) {
-							echo '<span class="wpex-flag-after">'. esc_html( $after ) .'</span>';
-						}
+					if ( $inline && $before ) {
+						$output .= '<span class="wpex-flag-before">'. esc_html( $before ) .'</span>';
+					}
+					$output .= '<span class="'. esc_attr( $classes ) .'"></span>';
+					if ( $inline && $after ) {
+						$output .= '<span class="wpex-flag-after">'. esc_html( $after ) .'</span>';
+					}
 				if ( ! $inline ) {
-						echo '<span class="wpex-flag-wrapper-after"></span>';
-					echo '</div>';
+						$output .= '<span class="wpex-flag-wrapper-after"></span>';
+					$output .= '</div>';
 				}
+
+				// Return output
+				return $output;
 
 			}
 
