@@ -1,3 +1,39 @@
+/* plugin CSS*/
+.wpex-flag-wrapper {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.wpex-flag-wrapper-after {
+  padding-top: 75%;
+  display: block;
+}
+.wpex-flag-wrapper .flag-icon-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.wpex-flag-wrapper .flag-icon.flag-icon-squared {
+  width: 100%
+}
+.wpex-flag-before,
+.wpex-flag-after {
+  display: inline-block;
+}
+.wpex-flag-before {
+  margin-right: 10px;
+}
+.wpex-flag-after {
+  margin-left: 10px;
+}
+
+/* flag-icon-css core CSS */
 .flag-icon-background {
   background-size: contain;
   background-position: 50%;
