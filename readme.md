@@ -1,0 +1,1 @@
+A little WordPress plugin used to display SVG flag icons via a shortcode.
