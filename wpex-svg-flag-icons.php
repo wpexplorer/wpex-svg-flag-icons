@@ -104,7 +104,7 @@ if ( ! class_exists( 'WPEX_SVG_Flag_Icons' ) ) :
 					$inline_style .= 'width:'. esc_attr( $width ) .';';
 				}
 				if ( $inline_style ) {
-					$inline_style .= ' style="'. $inline_style .'"';
+					$inline_style = ' style="'. $inline_style .'"';
 				}
 
 				// Render shortcode
@@ -119,7 +119,9 @@ if ( ! class_exists( 'WPEX_SVG_Flag_Icons' ) ) :
 						$output .= '<span class="wpex-flag-after">'. esc_html( $after ) .'</span>';
 					}
 				if ( ! $inline ) {
-						$output .= '<span class="wpex-flag-wrapper-after"></span>';
+						if ( ! $height ) {
+							$output .= '<span class="wpex-flag-wrapper-after"></span>';
+						}
 					$output .= '</div>';
 				}
 
