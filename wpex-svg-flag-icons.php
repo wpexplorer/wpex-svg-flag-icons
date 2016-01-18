@@ -5,7 +5,7 @@
  * Description: Display SVG flag icons via a shortcode.
  * Author: AJ Clarke
  * Author URI: http://www.wpexplorer.com
- * Version: 1.0.0
+ * Version: 1.0.1
  *
  * Plugin based on the flag-icon-css project located here: http://lipis.github.io/flag-icon-css/
  * 
