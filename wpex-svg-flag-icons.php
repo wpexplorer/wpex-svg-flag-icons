@@ -81,7 +81,9 @@ if ( ! class_exists( 'WPEX_SVG_Flag_Icons' ) ) :
 			// Check and sanitize country
 			if ( $country = $this->get_country_code( $country ) ) {
 
-				// Enqueue stylesheet
+				// Enqueue stylesheet only when shortcode is present.
+				// Loading styles here is more efficient but will make it so the flag won't display until the site footer is rendered.
+				// However you can enqueue the stylesheet on all pages if you want in the <head> via a child theme function ;)
 				wp_enqueue_style( 'wpex-svg-flag-icons' );
 
 				// Get element classes
