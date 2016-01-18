@@ -16,7 +16,6 @@
  *                 inline  (should flag display inline or full-width)
  *                 before  (text that displays before the flag - inline must be true)
  *                 after   (text that displays after the flag - inline must be true)
- *
  */
 
 // Exit if accessed directly
