@@ -91,7 +91,7 @@ if ( ! class_exists( 'WPEX_SVG_Flag_Icons' ) ) :
 				// Get element classes
 				$classes = 'flag-icon flag-icon-background';
 				$classes .= ' flag-icon-'. esc_attr( $country );
-				if ( $height && $width && $height == $width ) {
+				if ( $height && $width && ( $height == $width ) ) {
 					$classes .= ' flag-icon-squared';
 				}
 
